@@ -19,7 +19,7 @@ PADE is developed in [Python 3.7](https://www.python.org/) and has a [Twisted](h
 #### Via Python Package Index (PyPI):
 ```bash
 $ pip install pade
-```
+```git reset --hard HEAD^
 
 #### Via Github:
 ```bash
