@@ -32,3 +32,6 @@ $ python setup.py install
 #### Para rodar o sistema multiagente:
 ```bash
 $ pade start-runtime --port 2704 MAS.py
+``` 
+#### Duvidas:
+gustavoeichlerunb@gmail.com
