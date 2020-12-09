@@ -7,17 +7,17 @@ O projeto consiste em um sistema Multi Agente para o pareamento de usuários e a
 É necessário instalar o framework PADE e o MATLAB para o funcionamento do sistema.
 
 
-# Para a instalação do PADE:
+## Para a instalação do PADE:
 
-## Documentation
+### Documentation
 
 PADE is well documented. You can access the documentation here: [PADE documentation](https://pade.readthedocs.io/en/latest/)
 
-## Dependencies
+### Dependencies
 
 PADE is developed in [Python 3.7](https://www.python.org/) and has a [Twisted](https://twistedmatrix.com/trac/) core.
 
-## Install
+### Install
 
 #### Via Python Package Index (PyPI):
 ```bash
