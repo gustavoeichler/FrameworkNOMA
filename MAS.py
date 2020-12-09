@@ -146,6 +146,7 @@ class CompContNet2(FipaContractNetProtocol):
         answer.set_performative(ACLMessage.PROPOSE)
         answer.set_content(str(self.agent.pot_disp))
         self.agent.send(answer)
+        display_message(self.agent.aid.name,f'O meu ganho de canal é {self.agent.ganho}')
 
     def handle_reject_propose(self, message):
         """
@@ -199,6 +200,7 @@ class AgenteDispositivo(Agent):
         g = np.power(np.abs(h),2)
         self.ganho = 10*np.log10(g)
         self.pot_disp = self.ganho
+        
         comp = CompContNet2(self)
 
         self.behaviours.append(comp)
@@ -215,7 +217,7 @@ if __name__ == "__main__":
 
         agent_name = 'AgenteDispositivo1@localhost:{}'.format(port + k)
         participants.append(agent_name)
-        agente_part_1 = AgenteDispositivo(AID(name=agent_name), uniform(20.0, 50.0))
+        agente_part_1 = AgenteDispositivo(AID(name=agent_name), uniform(20.0,30.0))
         agents.append(agente_part_1)
 
         agent_name = 'AgenteDispositivo2@localhost:{}'.format(port + 2*k)
@@ -225,7 +227,7 @@ if __name__ == "__main__":
 
         agent_name = 'AgenteDispositivo3@localhost:{}'.format( port + 3*k)
         participants.append(agent_name)
-        agente_part_1 = AgenteDispositivo(AID(name=agent_name), uniform(15.0, 75.0))
+        agente_part_1 = AgenteDispositivo(AID(name=agent_name), uniform(75.0, 150.0))
         agents.append(agente_part_1)
 
         agent_name = 'AgenteControlador@localhost:{}'.format(port)
