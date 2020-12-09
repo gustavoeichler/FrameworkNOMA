@@ -42,5 +42,6 @@ $ pade start-runtime --port 2704 MAS.py
 ## Resumo do sistema:
 O sistema multiagente consiste em um cenário de transmissão downlink, onde um antena transmite dados a usuários presentes na rede. No cenário proposto existem 3 usuários, o sistema multiagente deve analizar as condições de canal de cada usuário e assim parear dois dos três usuários para realizar uma transmissão não ortogonal (NOMA).
 Utilizando o protocolo contract net, implementado em PADE, os usuários receberem um Call For Propose (CFP) do agente controlador, devem informar suas condições de canal, ou seja o ganho de canal em dB, sendo o ganho a oferta realizada no protocolo. O agente controlador ao receber as três ofertas deve analizar qual dos usuários formarão o par que deve atingir as maiores médias de throughput. O calculo do throughput atingível é feito em Matlab, sendo o raciocínio do agente controlador, que retorna o par de usuários selecionado e qual parcela da potência de transmissão deve ser alocada para cada um dos usuários pareados.
+A imagem abaixo mostra o o funcionamento do algoritmo com os três usuários enviando propostas, e ao final o agente controlador aceita duas propostas e rejeita. As duas propostas aceitas indicam quais usuários foram pareados.
 
 ![alt tag](https://github.com/gustavoeichler/FrameworkNOMA/blob/master/MAS_Contract_Net.png)
